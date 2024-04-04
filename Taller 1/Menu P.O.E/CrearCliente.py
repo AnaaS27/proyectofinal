@@ -60,16 +60,19 @@ class CrearCliente:
         Tooltip(self.btnAyuda, "Presioname para obtener ayuda!\nAlt+a")
         self.btnAyuda.bind("<Button-1>", self.mostrarAyuda)
         self.ventana.bind('<Alt-a>', self.mostrarAyuda)
-
-        self.btnAgregar = tk.Button(self.ventana, text="Agregar")
+        
+        iconoAgregar = tk.PhotoImage(file= r"Taller 1\Menu P.O.E\icons copy\user_add.png")
+        self.btnAgregar = tk.Button(self.ventana, text="Agregar",  image=iconoAgregar)
         self.btnAgregar.place(x=80, y=220)
         Tooltip(self.btnAgregar, "¡Clic para Agregar Cliente!")
 
-        self.btnLimpiar = tk.Button(self.ventana, text="Limpiar")
+        iconoLimpiar = tk.PhotoImage(file= r"Taller 1/Menu P.O.E/icons copy/textfield_delete.png")
+        self.btnLimpiar = tk.Button(self.ventana, text="Limpiar",  image=iconoLimpiar)
         self.btnLimpiar.place(x=150, y=220)
         Tooltip(self.btnLimpiar, "¡Clic para Limpiar los Campos!")
 
-        self.btnSalir = tk.Button(self.ventana, text="Salir", command=self.salir1)
+        iconoSalir = tk.PhotoImage(file= r"Taller 1\Menu P.O.E\icons copy\cancel.png") 
+        self.btnSalir = tk.Button(self.ventana, text="Salir",  image=iconoSalir, command=self.salir1)
         self.btnSalir.place(x=220, y=220)
         Tooltip(self.btnSalir, "¡Clic para Salir!\nControl+s")
         self.ventana.bind("<Control-s>", self.salir1)
