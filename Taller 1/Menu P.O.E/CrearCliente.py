@@ -54,7 +54,7 @@ class CrearCliente:
         self.txtCorreo = tk.Entry(self.ventana, width=25, state="disabled")
         self.txtCorreo.place(x=130, y=180)
 
-        iconoAyuda = tk.PhotoImage(file= r"Menu P.O.E\icons\help.png")
+        iconoAyuda = tk.PhotoImage(file= r"Taller 1\Menu P.O.E\icons copy\help.png")
         self.btnAyuda = tk.Button(self.ventana, image=iconoAyuda)
         self.btnAyuda.place(relx=1, x=-45, y=25, width=25,height=25)
         Tooltip(self.btnAyuda, "Presioname para obtener ayuda!\nAlt+a")
