@@ -118,7 +118,7 @@ class Registro():
         iconoLimpiar = tk.PhotoImage(file= r"Taller 3\Place\icons\textfield_delete.png")
         self.btnLimpiar = tk.Button(self.ventana, text="Limpiar", image=iconoLimpiar, compound=LEFT)
         self.btnLimpiar.place(relx=1, x=-170, rely=1, y=-45, width=70, height=25)
-        Tooltip(self.btnLimpiar, "Presione para Limpiar los campos de texto.\nAlt+l")
+        Tooltip(self.btnLimpiar, "Presione para Limpiar los campos de  texto.\nAlt+l")
 
         iconoRegistrar = tk.PhotoImage(file= r"Taller 3\Place\icons\user_add.png")
         self.btnRegistrar = tk.Button(self.ventana, text="Registrar", image=iconoRegistrar, compound=LEFT, state="disabled", command=lambda:self.registrarUsuario())
