@@ -67,15 +67,18 @@ class ModificarCliente():
         self.btnBuscar.place(x=285, y=60, width=25,height=20)
         Tooltip(self.btnBuscar, "¡Clic para Buscar!")
 
-        self.btnGuardar = tk.Button(self.ventana, text="Guardar")
+        iconoGuardar = tk.PhotoImage(file= r"Taller 1\Menu P.O.E\icons copy\save.png")
+        self.btnGuardar = tk.Button(self.ventana, image=iconoGuardar, text="Guardar")
         self.btnGuardar.place(x=80, y=220)
         Tooltip(self.btnGuardar, "¡Clic para Guardar Cambios!")
 
-        self.btnLimpiar = tk.Button(self.ventana, text="Limpiar")
+        iconoLimpiar = tk.PhotoImage(file= r"Taller 1\Menu P.O.E\icons copy\textfield_delete.png")
+        self.btnLimpiar = tk.Button(self.ventana, image=iconoLimpiar , text="Limpiar")
         self.btnLimpiar.place(x=150, y=220)
         Tooltip(self.btnLimpiar, "¡Clic para Limpiar los Campos!")
 
-        self.btnSalir = tk.Button(self.ventana, text="Salir", command=self.salir2)
+        iconoSalir = tk.PhotoImage(file= r"Taller 1\Menu P.O.E\icons copy\cancel.png")
+        self.btnSalir = tk.Button(self.ventana, text="Salir", image=iconoSalir , command=self.salir2)
         self.btnSalir.place(x=220, y=220)
         Tooltip(self.btnSalir, "¡Clic para Salir!\nControl+s")
         self.ventana.bind("<Control-s>", self.salir2)
