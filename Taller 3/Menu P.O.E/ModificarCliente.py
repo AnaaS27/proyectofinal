@@ -25,7 +25,7 @@ class ModificarCliente():
         self.lblTitulo = tk.Label(self.ventana, text="Modificar Cliente")
         self.lblTitulo.place(relx=0.5, y=40, anchor="center")
 
-        iconoAyuda = tk.PhotoImage(file= r"Taller 1\Menu P.O.E\icons copy\help.png")
+        iconoAyuda = tk.PhotoImage(file= r"Taller 3\Menu P.O.E\icons copy\help.png")
         self.btnAyuda = tk.Button(self.ventana, image=iconoAyuda)
         self.btnAyuda.place(relx=1, x=-45, y=25, width=25,height=25)
         Tooltip(self.btnAyuda, "Presioname para obtener ayuda!\nAlt+a")
@@ -62,22 +62,22 @@ class ModificarCliente():
         self.txtCorreo = tk.Entry(self.ventana, width=25)
         self.txtCorreo.place(x=130, y=180)
 
-        iconoBuscar = tk.PhotoImage(file= r"Menu P.O.E\icons\magnifier.png")
+        iconoBuscar = tk.PhotoImage(file= r"Taller 3\Menu P.O.E\icons copy\magnifier.png")
         self.btnBuscar = tk.Button(self.ventana, image=iconoBuscar)
         self.btnBuscar.place(x=285, y=60, width=25,height=20)
         Tooltip(self.btnBuscar, "¡Clic para Buscar!")
 
-        iconoGuardar = tk.PhotoImage(file= r"Taller 1\Menu P.O.E\icons copy\save.png")
+        iconoGuardar = tk.PhotoImage(file= r"Taller 3\Menu P.O.E\icons copy\save.png")
         self.btnGuardar = tk.Button(self.ventana, image=iconoGuardar, text="Guardar")
         self.btnGuardar.place(x=80, y=220)
         Tooltip(self.btnGuardar, "¡Clic para Guardar Cambios!")
 
-        iconoLimpiar = tk.PhotoImage(file= r"Taller 1\Menu P.O.E\icons copy\textfield_delete.png")
+        iconoLimpiar = tk.PhotoImage(file= r"Taller 3\Menu P.O.E\icons copy\textfield_delete.png")
         self.btnLimpiar = tk.Button(self.ventana, image=iconoLimpiar , text="Limpiar")
         self.btnLimpiar.place(x=150, y=220)
         Tooltip(self.btnLimpiar, "¡Clic para Limpiar los Campos!")
 
-        iconoSalir = tk.PhotoImage(file= r"Taller 1\Menu P.O.E\icons copy\cancel.png")
+        iconoSalir = tk.PhotoImage(file= r"Taller 3\Menu P.O.E\icons copy\cancel.png")
         self.btnSalir = tk.Button(self.ventana, text="Salir", image=iconoSalir , command=self.salir2)
         self.btnSalir.place(x=220, y=220)
         Tooltip(self.btnSalir, "¡Clic para Salir!\nControl+s")
