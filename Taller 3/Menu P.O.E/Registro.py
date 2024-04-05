@@ -2,6 +2,7 @@ import tkinter as tk
 from tkinter import *
 from tkinter import messagebox
 from Tooltip import Tooltip  # Importa la clase Tooltip desde un módulo externo
+from Loggin import Loggin
 
 class Registro():
     # Función para mostrar un mensaje de ayuda
@@ -63,7 +64,8 @@ class Registro():
     
     # Función para registrar un nuevo usuario
     def registrarUsuario(self, *args):
-        messagebox.showwarning("Advertencia", "Aquí va la lógica para cerrar esta ventana y abrir la siguiente...")
+        self.ventana.destroy()
+        ventanaLoggin = Loggin()
 
     def __init__(self):
         # Configuración de la ventana principal
@@ -76,7 +78,7 @@ class Registro():
         self.lblTitulo = tk.Label(self.ventana, text="Registrarse")
         self.lblTitulo.place(relx=0.5, y=45, height=15, anchor="center")
 
-        iconoAyuda = tk.PhotoImage(file= r"Taller 3\Place\icons\help.png")
+        iconoAyuda = tk.PhotoImage(file= r"Taller 3\Menu P.O.E\icons copy\help.png")
         self.btnAyuda = tk.Button(self.ventana, image=iconoAyuda)
         self.btnAyuda.place(relx=1, x=-45, y=10, width=25, height=25)
         Tooltip(self.btnAyuda, "Presione para obtener ayuda!\nAlt+a")
@@ -109,18 +111,18 @@ class Registro():
         Tooltip(self.txtPassword, "Ingrese su Password.\nSolo letas, números y el punto [a-z, 0-9, .]")
         self.txtPassword.bind('<KeyRelease>', self.validarPass)
 
-        iconoSalir = tk.PhotoImage(file= r"Taller 3\Place\icons\cancel.png")
+        iconoSalir = tk.PhotoImage(file= r"Taller 3\Menu P.O.E\icons copy\cancel.png")
         #El atributo compound determina la ubicación del icono en el botón respecto al texto LEFT-UP-DOWN-RIGTH.
         self.btnSalir = tk.Button(self.ventana, text="Salir", image=iconoSalir, compound=LEFT)
         self.btnSalir.place(relx=1, x=-80, rely=1, y=-45, width=60, height=25)
         Tooltip(self.btnSalir, "Presione para Salir de la Aplicación.\nAlt+s")
 
-        iconoLimpiar = tk.PhotoImage(file= r"Taller 3\Place\icons\textfield_delete.png")
+        iconoLimpiar = tk.PhotoImage(file= r"Taller 3\Menu P.O.E\icons copy\textfield_delete.png")
         self.btnLimpiar = tk.Button(self.ventana, text="Limpiar", image=iconoLimpiar, compound=LEFT)
         self.btnLimpiar.place(relx=1, x=-170, rely=1, y=-45, width=70, height=25)
         Tooltip(self.btnLimpiar, "Presione para Limpiar los campos de  texto.\nAlt+l")
 
-        iconoRegistrar = tk.PhotoImage(file= r"Taller 3\Place\icons\user_add.png")
+        iconoRegistrar = tk.PhotoImage(file= r"Taller 3\Menu P.O.E\icons copy\user_add.png")
         self.btnRegistrar = tk.Button(self.ventana, text="Registrar", image=iconoRegistrar, compound=LEFT, state="disabled", command=lambda:self.registrarUsuario())
         self.btnRegistrar.place(x=20, rely=1, y=-45, width=70, height=25)
         Tooltip(self.btnRegistrar, "Presione para Registrarse como usuario o presione la tecla 'Enter'.\n")
@@ -136,4 +138,3 @@ class Registro():
         self.ventana.mainloop()  # Inicia el bucle principal de la aplicación
 
 # Crea una instancia de la clase Registro para iniciar la aplicación
-app = Registro()
