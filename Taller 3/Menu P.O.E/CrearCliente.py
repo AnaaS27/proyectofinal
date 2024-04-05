@@ -39,19 +39,19 @@ class CrearCliente:
         self.lblCorreo = tk.Label(self.ventana, text="Correo*:")
         self.lblCorreo.place(x=50, y=180)
 
-        self.txtCedula = tk.Entry(self.ventana, width=25, state="disabled")
+        self.txtCedula = tk.Entry(self.ventana, width=25)
         self.txtCedula.place(x=130, y=60)
 
-        self.txtNombre = tk.Entry(self.ventana, width=25, state="disabled")
+        self.txtNombre = tk.Entry(self.ventana, width=25)
         self.txtNombre.place(x=130, y=90)
 
-        self.txtApellido = tk.Entry(self.ventana, width=25, state="disabled")
+        self.txtApellido = tk.Entry(self.ventana, width=25)
         self.txtApellido.place(x=130, y=120)
 
-        self.txtTelefono = tk.Entry(self.ventana, width=25, state="disabled")
+        self.txtTelefono = tk.Entry(self.ventana, width=25)
         self.txtTelefono.place(x=130, y=150)
 
-        self.txtCorreo = tk.Entry(self.ventana, width=25, state="disabled")
+        self.txtCorreo = tk.Entry(self.ventana, width=25)
         self.txtCorreo.place(x=130, y=180)
 
         iconoAyuda = tk.PhotoImage(file= r"Taller 1\Menu P.O.E\icons copy\help.png")
