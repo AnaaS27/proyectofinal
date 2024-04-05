@@ -95,22 +95,27 @@ class Loggin():
 
         self.txtUsuario = tk.Entry(self.ventana, width=25)
         self.txtUsuario.place(x=115, y=100)
+        Tooltip(self.txtUsuario, "Ingrese su Nombre seguido de un punto(.) y luego su Apellido.\nsin espacios y en minuscula")
+    
         self.txtPassword = tk.Entry(self.ventana, width=25, show='*')
         self.txtPassword.place(x=115, y=130)
+        Tooltip(self.txtPassword, "Su contraseña es el Numero de Identificacion!\nminimo 8 caracteres")
         self.txtPassword.bind("<KeyRelease>", self.validarLongitud)
         
-        self.btnIngresar = tk.Button(self.ventana, text="Ingresar", command=lambda: self.validarIngreso())
+        iconoIngresar = tk.PhotoImage(file= r"Taller 3\Menu P.O.E\icons copy\door_in.png")
+        self.btnIngresar = tk.Button(self.ventana, text="Ingresar", image=iconoIngresar, compound=LEFT, command=lambda: self.validarIngreso())
         self.btnIngresar.place(x=80, y=170)
         Tooltip(self.btnIngresar, "¡Clic para Ingresar!\nEnter")
         self.ventana.bind("<Return>", self.validarIngreso)
 
-        self.btnLimpiar =  tk.Button(self.ventana, text="Limpiar", command=lambda: self.limpiarCampos())
+        iconoLimpiar = tk.PhotoImage(file= r"Taller 3\Menu P.O.E\icons copy\textfield_delete.png")
+        self.btnLimpiar =  tk.Button(self.ventana, text="Limpiar", image=iconoLimpiar, compound=LEFT, command=lambda: self.limpiarCampos())
         self.btnLimpiar.place(x=150, y=170)
         Tooltip(self.btnLimpiar, "¡Clic para Limpiar!\nControl+l")
         self.ventana.bind("<Control-l>", self.limpiarCampos)
 
-
-        self.btnSalir = tk.Button(self.ventana, text="Salir", command=lambda: self.salirSistema())
+        iconoSalir = tk.PhotoImage(file= r"Taller 3\Menu P.O.E\icons copy\cancel.png")
+        self.btnSalir = tk.Button(self.ventana, text="Salir", image=iconoSalir, compound=LEFT, command=lambda: self.salirSistema())
         self.btnSalir.place(x=220, y=170)
         Tooltip(self.btnSalir, "¡Clic para Salir!\nControl+s")
         self.ventana.bind("<Control-s>", self.salirSistema)

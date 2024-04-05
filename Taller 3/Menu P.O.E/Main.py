@@ -6,8 +6,7 @@ from Registro import Registro
 
 class Main():
     def main():
-        app1 = Registro()
-        app2 = Loggin()
+        app = Registro()
     main()
 
 

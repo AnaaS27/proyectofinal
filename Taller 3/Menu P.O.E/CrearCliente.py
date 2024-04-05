@@ -41,18 +41,23 @@ class CrearCliente:
 
         self.txtCedula = tk.Entry(self.ventana, width=25)
         self.txtCedula.place(x=130, y=60)
+        Tooltip(self.txtCedula, "Ingrese su numero de cedula, sin espacios")
 
         self.txtNombre = tk.Entry(self.ventana, width=25)
         self.txtNombre.place(x=130, y=90)
+        Tooltip(self.txtNombre, "Ingrese sus nombres, solo letras de a-z")
 
         self.txtApellido = tk.Entry(self.ventana, width=25)
         self.txtApellido.place(x=130, y=120)
+        Tooltip(self.txtApellido, "Ingrese sus apellidos, solo letras de a-z")
 
         self.txtTelefono = tk.Entry(self.ventana, width=25)
         self.txtTelefono.place(x=130, y=150)
+        Tooltip(self.txtTelefono, "Ingrese su numero de telefono,\n sin espacios, min 10 digitos")
 
         self.txtCorreo = tk.Entry(self.ventana, width=25)
         self.txtCorreo.place(x=130, y=180)
+        Tooltip(self.txtCorreo, "Ingrese su correo electronico,\n puede usar caracteres especiales como: @, (.) y numeros")
 
         iconoAyuda = tk.PhotoImage(file= r"Taller 3\Menu P.O.E\icons copy\help.png")
         self.btnAyuda = tk.Button(self.ventana, image=iconoAyuda)
@@ -62,17 +67,17 @@ class CrearCliente:
         self.ventana.bind('<Alt-a>', self.mostrarAyuda)
         
         iconoAgregar = tk.PhotoImage(file= r"Taller 3\Menu P.O.E\icons copy\user_add.png")
-        self.btnAgregar = tk.Button(self.ventana, text="Agregar",  image=iconoAgregar)
+        self.btnAgregar = tk.Button(self.ventana, text="Agregar",  image=iconoAgregar, compound="left")
         self.btnAgregar.place(x=80, y=220)
         Tooltip(self.btnAgregar, "¡Clic para Agregar Cliente!")
 
         iconoLimpiar = tk.PhotoImage(file= r"Taller 3\Menu P.O.E\icons copy\textfield_delete.png")
-        self.btnLimpiar = tk.Button(self.ventana, text="Limpiar",  image=iconoLimpiar)
+        self.btnLimpiar = tk.Button(self.ventana, text="Limpiar",  image=iconoLimpiar, compound="left")
         self.btnLimpiar.place(x=150, y=220)
         Tooltip(self.btnLimpiar, "¡Clic para Limpiar los Campos!")
 
         iconoSalir = tk.PhotoImage(file= r"Taller 3\Menu P.O.E\icons copy\cancel.png") 
-        self.btnSalir = tk.Button(self.ventana, text="Salir",  image=iconoSalir, command=self.salir1)
+        self.btnSalir = tk.Button(self.ventana, text="Salir",  image=iconoSalir, compound="left", command=self.salir1)
         self.btnSalir.place(x=220, y=220)
         Tooltip(self.btnSalir, "¡Clic para Salir!\nControl+s")
         self.ventana.bind("<Control-s>", self.salir1)
